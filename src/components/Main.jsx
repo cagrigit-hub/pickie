@@ -35,7 +35,8 @@ function Main(){
         "Al Pacino", 
         "Michelle Pfeiffer", 
         "Steven Bauer"
-    ],"poster" : "https://m.media-amazon.com/images/M/MV5BNjdjNGQ4NDEtNTEwYS00MTgxLTliYzQtYzE2ZDRiZjFhZmNlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"});
+    ],"poster" : "https://m.media-amazon.com/images/M/MV5BNjdjNGQ4NDEtNTEwYS00MTgxLTliYzQtYzE2ZDRiZjFhZmNlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+                                    "trailer":"https://www.youtube.com/watch?v=7pQQHnqBa2E"});
     function handleClick(){
         const numberOfUsers = 250;
         const randomIndex = Math.floor(Math.random() * numberOfUsers);
