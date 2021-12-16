@@ -25,15 +25,17 @@ const firebaseConfig = {
 function Main(){
     
 
-    const [data,setData] = useState({});
-    useEffect(() => {
-        const database = getDatabase(app);
-        const starCountRef = ref(database, 'movies/');
-        onValue(starCountRef, (snapshot) => {
-        const data = snapshot.val();
-        setData(data[115])
-        });
-      }, []);
+    const [data,setData] = useState({"title" : "Scarface",
+    "plot" : "In 1980 Miami, a determined Cuban immigrant takes over a drug cartel and succumbs to greed.",
+    "genre" : "Crime",
+    "year" : "1983",
+    "imdb" : "8.3",
+    "director" : "Brian De Palma",
+    "stars" : [ 
+        "Al Pacino", 
+        "Michelle Pfeiffer", 
+        "Steven Bauer"
+    ],"poster" : "https://m.media-amazon.com/images/M/MV5BNjdjNGQ4NDEtNTEwYS00MTgxLTliYzQtYzE2ZDRiZjFhZmNlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"});
     function handleClick(){
         const numberOfUsers = 250;
         const randomIndex = Math.floor(Math.random() * numberOfUsers);
