@@ -8,7 +8,7 @@ function Headers() {
         </div>
         <div className="right">
             <span className="right-span righto"> <a href="/register" style={{"pointer-events": "none"}}> Register </a> </span>
-            <span className="right-span" style={{"width":"100px"}}> <a href="/login" style={{"pointer-events": "none"}}> Log In </a> </span>
+            <span className="right-span" style={{"width":60px"}}> <a href="/login" style={{"pointer-events": "none"}}> Log In </a> </span>
         </div>
     </div>
 }
