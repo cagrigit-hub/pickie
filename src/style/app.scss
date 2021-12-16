@@ -1,0 +1,20 @@
+.app{
+   
+    overflow-x: hidden;
+    .sections{
+        width: 100%;
+        position: relative;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none; //for firefox
+        &::-webkit-scrollbar{ // EVERYTHING ELSE
+            display: none;
+        }
+
+        > *{
+            width: 100vw;
+            
+            scroll-snap-align: start;
+        }
+    } 
+}
