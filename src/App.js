@@ -2,7 +2,7 @@
 import Main from "./components/Main";
 
 import "./style/app.scss"
-
+require('dotenv').config()
 function App() {
   return (
   <div className="app">

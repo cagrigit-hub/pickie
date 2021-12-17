@@ -2,9 +2,9 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/sign.scss";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { initializeApp } from 'firebase/app';
+import {createUserWithEmailAndPassword } from "firebase/auth";
 import {getDatabase, ref, set} from "firebase/database"
+import {auth,app} from "../firebase.js"
 
 export default function Sign() {
   
@@ -13,26 +13,14 @@ export default function Sign() {
   const passwordConfirmRef = useRef()
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
+
   function handleSubmit(e) {
     e.preventDefault();
 
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
       return setError("Passwords do not match")
     }
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyAT1QOBWf_UpBvJ2gi9-UeE5QYdBaesEs0",
-      authDomain: "moviedata-eacb8.firebaseapp.com",
-      databaseURL: "https://moviedata-eacb8-default-rtdb.europe-west1.firebasedatabase.app",
-      projectId: "moviedata-eacb8",
-      storageBucket: "moviedata-eacb8.appspot.com",
-      messagingSenderId: "948938628834",
-      appId: "1:948938628834:web:1f4c4f2d075e0547ccc8bb"
-    };
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
     const database = getDatabase(app);
-    
     createUserWithEmailAndPassword(auth,emailRef.current.value,passwordRef.current.value)
     .then((userCredential) => {
     // Signed in 
@@ -46,8 +34,8 @@ export default function Sign() {
     // ...
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      /*const errorCode = error.code;
+      const errorMessage = error.message;*/
       setError("Failed to Sign Up or You are already Signed Up");
       setSuccess("")
      // ..

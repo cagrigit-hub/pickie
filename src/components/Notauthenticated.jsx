@@ -4,23 +4,11 @@ import "react-bootstrap";
 import {useState} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { initializeApp } from 'firebase/app';
+import {app} from "../firebase.js"
 import { getDatabase } from "firebase/database";
 import {ref, onValue} from "firebase/database";
 
 
-
-
-const firebaseConfig = {
-    apiKey: "AIzaSyAT1QOBWf_UpBvJ2gi9-UeE5QYdBaesEs0",
-    authDomain: "moviedata-eacb8.firebaseapp.com",
-    databaseURL: "https://moviedata-eacb8-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "moviedata-eacb8",
-    storageBucket: "moviedata-eacb8.appspot.com",
-    messagingSenderId: "948938628834",
-    appId: "1:948938628834:web:1f4c4f2d075e0547ccc8bb"
-  };
-  const app = initializeApp(firebaseConfig);
 
 
 function Authenticated({authed}){

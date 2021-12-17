@@ -30,7 +30,7 @@ function Headers({authed}) {
             <span className="left-span"> <a className="logo" href="/" > pickie </a> </span>
         </div>
         <div className="right">
-            <span style={{"width":"60px"}} onClick={handleClick} className="right-span righto"> <a href="/"> Sign Out </a> </span>
+            <span onClick={handleClick} className="right-span righto"> <a href="/"> Sign Out </a> </span>
             
         </div>
     </div>
