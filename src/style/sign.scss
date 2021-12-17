@@ -1,0 +1,12 @@
+
+
+.cart{
+    @media (max-width:1100px) {
+        height: 50%;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: calc(100vh - 120px - 150px);
+}
