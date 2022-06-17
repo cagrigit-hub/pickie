@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+a random movie recommendation project which will be upgraded by AI & Data Mining techs
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
